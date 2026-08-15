@@ -123,6 +123,48 @@ public class NumberPattern {
 
 #Printing the following pattern
   ex.
+
+  import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        int n = 5;
+
+        // Upper half (including the middle tip)
+        for (int i = 0; i <= n; i++) {
+            // Left stars
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print("*");
+            }
+            // Spaces
+            for (int j = 0; j < 2 * i; j++) {
+                System.out.print(" ");
+            }
+            // Right stars
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        // Lower half (mirroring the upper half)
+        for (int i = n - 1; i >= 0; i--) {
+            // Left stars
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print("*");
+            }
+            // Spaces
+            for (int j = 0; j < 2 * i; j++) {
+                System.out.print(" ");
+            }
+            // Right stars
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
   
 
 
