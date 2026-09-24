@@ -58,3 +58,34 @@ public class Main
 	}
 }
 
+
+----------------------------------------------------------# Left Shift the array by 1 element------------------------------------------------------------------------
+
+	*******************************************************************************/
+import java.util.Arrays;
+public class Main
+{
+    
+    public static void rotateShiftArray(int arr[]){
+        if(arr == null || arr.length <=1){
+            return;
+        }
+        int temp = arr[0];
+        for(int i=1; i<arr.length; i++){
+            arr[i-1] = arr[i];
+        }
+        
+        arr[arr.length-1] = temp;
+        
+    }
+	public static void main(String[] args) {
+	    
+	    int arr[] = {1,2,5,7,8,2};
+	    
+	    
+	    System.out.println("The original Array is " + Arrays.toString(arr));
+	    rotateShiftArray(arr);
+		System.out.println("The Shifted Array is " + Arrays.toString(arr));
+	}
+}
+
