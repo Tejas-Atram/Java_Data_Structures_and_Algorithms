@@ -27,3 +27,34 @@
 		System.out.println("Second Largest Element in the Array is: " + secondLargest);
 	}
 }
+
+
+----------------------------------------------------------#Maximum Number of Consecutive Ones in an Array--------------------------------------------------------------------
+
+
+public class Main
+{
+    
+    public static int ConsecutiveOnes(int arr[]){
+        int Count =0;
+        int maxCount = 0;
+        
+        for(int val : arr){
+            if(val == 1){
+                Count++;
+                if(Count > maxCount){
+                    maxCount = Count;
+                }
+            }else{
+                Count =0;
+            }
+        }   
+        return maxCount;
+    }
+	public static void main(String[] args) {
+	    
+	    int arr[] = {1,1,0,0,1,1,1,1,0,1,};
+		System.out.println("Consecutive number of ones is " + ConsecutiveOnes(arr));
+	}
+}
+
