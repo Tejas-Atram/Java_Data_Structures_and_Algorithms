@@ -158,3 +158,42 @@ public class Main {
 }
 }
 
+
+-------------------------------------#Check-if-Palindrome------------------------------------------------------
+
+
+	import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+      int arr[] = {1,2,3,2,1};
+      
+
+    boolean result = isPalindrome(arr);
+    System.out.println("It is a palindrome " + result);
+      
+    }
+
+    public static boolean isPalindrome(int arr[]){
+      int n = arr.length;
+      int right = n-1;
+      int left = 0;
+
+      while(left<right){
+        int temp = arr[right];
+        if(arr[right] != arr[left]){
+          return false;
+        };
+        left++;
+        right--;
+        // System.out.print(arr[i]);
+
+      }
+      return true;
+    
+            // System.out.print(arr[i] + " ");
+    
+}
+}
+
