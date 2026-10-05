@@ -5,6 +5,8 @@
  -Then we are going to return the element in an array which is at the location arr[n-1] if we are starting from i=1.
   -And then we are goinn to compare the largest element with the second largest element if(largest == secondLargest then traverse the array from the end of the array and get the element which is less than the largest element.)
 
+
+	1
  ---------------------------------------#Second Largest Element in the Array------------------------------------------------------------------------------------------------------------------------
 
  public class Main
@@ -29,6 +31,7 @@
 }
 
 
+2
 -------------------------------#Maximum Number of Consecutive Ones in an Array--------------------------------------------------------------------
 
 
@@ -59,6 +62,7 @@ public class Main
 }
 
 
+3
 --------------------------------# Left Shift the array by 1 element------------------------------------------------------------------------
 
 
@@ -89,6 +93,7 @@ public class Main
 	}
 }
 
+4.
 -------------------------#Left Shift K elements in the arrray--------------------------------------------------------------------
 	import java.util.Arrays;
 public class Main
@@ -131,6 +136,7 @@ public class Main
 	}
 }
 
+5.
 ---------------------------------------------------------------------#Reverse an array---------------------------------------------------------------------------
 
 	import java.util.*;
@@ -159,6 +165,7 @@ public class Main {
 }
 
 
+6.
 -------------------------------------#Check-if-Palindrome------------------------------------------------------
 
 
@@ -197,3 +204,39 @@ public class Main {
 }
 }
 
+
+7.
+---------------------------------#Move zeros to end of the array--------------------------------------------------------------
+
+	import java.util.Arrays;
+public class Main
+{
+    
+    public static void reverseArray(int arr[]){
+  int n = arr.length;
+  int j =0;
+  
+  for(int i=0; i<n; i++){
+      if(arr[i] != 0){
+          int temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp; 
+          j++;
+      }
+  }
+  for(int num : arr){
+      System.out.println(num);
+  }
+    }
+	public static void main(String[] args) {
+		
+		
+		int arr[] = {0, 0, 12,0,56,0,78,99,100,};
+		reverseArray(arr);
+		System.out.println("The reversed array is " + Arrays.toString(arr));
+		
+	}
+}
+
+
+8.
