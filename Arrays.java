@@ -238,5 +238,44 @@ public class Main
 	}
 }
 
+8.
+------------------------------------#Remove the duplicates in the sorted array and print the same----------------------- 
+
+	import java.util.Arrays;
+public class Main
+{
+    
+    public static int removeDuplicates(int arr[]){
+        int n = arr.length;
+        int j = 0;
+        
+        if(n == 0){
+            return 0;
+        }
+        
+        for(int i = 1; i< n; i++){
+            if(arr[i] != arr[j]){
+                j++;
+                arr[j] = arr[i];
+            }
+        }
+        return j+1;
+ 
+    }
+	public static void main(String[] args) {
+		
+		
+		int arr[] = {12, 12,56,78,78,99,100};
+		int uniqueCount = removeDuplicates(arr);
+		System.out.print("The Array without duplicates is: [ " );
+		for(int i=0; i< uniqueCount; i++){
+		    System.out.print(arr[i] + (i < uniqueCount - 1 ? " , " : ""));
+		    
+		}
+		System.out.print("]");
+		
+	}
+}
+
 
 8.
